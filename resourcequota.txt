@@ -1,0 +1,14 @@
+----------------------------Resource Quotas-------------------------------
+When several users or teams share a cluster with a fixed number of nodes, 
+there is a concern that one team could use more than its fair share of resources.
+
+A resource quota, defined by a ResourceQuota object, provides constraints that limit aggregate resource consumption per namespace.
+It can limit the quantity of objects that can be created in a namespace by type, 
+as well as the total amount of compute resources that may be consumed by resources in that namespace.
+
+
+-------------Enabling Resource Quota--------------------------
+Resource Quota support is enabled by default for many Kubernetes distributions. 
+It is enabled when the API server --enable-admission-plugins= flag has ResourceQuota as one of its arguments.
+
+A resource quota is enforced in a particular namespace when there is a ResourceQuota in that namespace.
